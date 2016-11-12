@@ -1,0 +1,31 @@
+<template name="t_takeSurvey">
+<!-- Template to ask questions and show them with a yes no button -->
+  <form class="take-survey">
+    <div class="container">
+
+      <ul>
+        {{#each questions}}
+              <li>
+              <span class="text">
+
+                  <span style="color:blue">
+                  <label class="yes-radio-inline"><input type="radio" id="response{{counter}}"
+                              name="response{{counter}}" value="Yes">Yes</label>
+                  </span>
+
+                  <span style="color:red">
+                  <label class="no-radio-inline"><input type="radio" id="response{{counter}}" 
+                              name="response{{counter}}" value="No">No</label>
+                  </span>
+
+                  <span class="text">{{counter}}.{{text}}</span>
+              </span>
+            </li>
+          {{/each}}
+      </ul>
+      <button type="submit" class="btn btn-primary">Submit Survey</button>
+
+    </div>
+  </form>
+
+</template>

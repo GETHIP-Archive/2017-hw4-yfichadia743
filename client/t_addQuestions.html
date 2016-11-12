@@ -1,0 +1,23 @@
+<template name="t_addQuestions">
+<!-- Form to collection new questions and display them -->
+  <form class="new-question">
+    <div class="container">
+      <input type="text" name="text" class="form-control" 
+          placeholder="Insert a question.....">
+    </div>
+  </form>
+
+    <div class="container">
+      <ul>
+        {{#each questions}}
+          <li class="{{#if checked}}checked{{/if}}">
+              <button class="delete-todo">&times;</button>
+              <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+              <span class="text">{{text}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+
+</template>
